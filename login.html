@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>gov.gr wallet</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{width:100%;height:100%;font-family:'Noto Sans',system-ui,sans-serif;background:#0a1c4a;color:#fff;overflow:hidden}
+.bg{position:absolute;inset:0;background:#0a1c4a;background-image:radial-gradient(rgba(255,255,255,.07) 1.1px,transparent 1.1px);background-size:17px 17px;pointer-events:none}
+.wrap{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 24px}
+.logo{font-size:44px;font-weight:700;letter-spacing:-1.5px;text-align:center;margin-bottom:70px;line-height:1.15}
+.logo span{color:#4da6ff}
+.btns{width:100%;max-width:340px}
+.btn-tax{width:100%;padding:16px;border:none;border-radius:14px;background:#1a9fff;color:#fff;font-size:16px;font-weight:600;cursor:pointer;margin-bottom:14px}
+.row{display:flex;gap:10px;margin-bottom:12px}
+.btn-out{flex:1;padding:14px;border:1.5px solid rgba(255,255,255,.35);border-radius:14px;background:transparent;color:#fff;font-size:14px;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-face{width:52px;height:52px;border:1.5px solid rgba(255,255,255,.35);border-radius:14px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0}
+.div{display:flex;align-items:center;gap:14px;margin:22px 0 16px;color:rgba(255,255,255,.45);font-size:13px}
+.div::before,.div::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.2)}
+.foot{position:absolute;bottom:36px;left:0;right:0;text-align:center;z-index:2}
+.foot span{font-size:20px;font-weight:700}
+.foot b{color:#4da6ff}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<div class="wrap">
+  <div class="logo">gov.<span>gr</span><br>wallet</div>
+  <div class="btns">
+    <button class="btn-tax" onclick="parent.postMessage({nav:'home'},'*')">Σύνδεση με κωδικούς TaxisNet</button>
+    <div class="row">
+      <button class="btn-out">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Έλεγχος Εγγράφου
+      </button>
+      <div class="btn-face">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7"><path d="M9 3H5a2 2 0 00-2 2v4M15 3h4a2 2 0 012 2v4M9 21H5a2 2 0 01-2-2v-4M15 21h4a2 2 0 002-2v-4"/><circle cx="12" cy="10" r="3"/><path d="M7 17c1.5-2 3-3 5-3s3.5 1 5 3"/></svg>
+      </div>
+    </div>
+    <button class="btn-out" style="width:100%;margin-bottom:0">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><text x="12" y="15.5" text-anchor="middle" font-size="8" fill="#fff" stroke="none" font-weight="700">18+</text></svg>
+      Επαλήθευση Ηλικίας
+    </button>
+    <div class="div">Non Greek Residents</div>
+    <button class="btn-out" style="width:100%">Event Tickets</button>
+  </div>
+</div>
+<div class="foot">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="#4da6ff" style="vertical-align:middle;margin-right:6px"><path d="M12 2L4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4z"/></svg>
+  <span>gov<b>gr</b></span>
+</div>
+</body>
+</html>
